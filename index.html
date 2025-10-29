@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamarras Coreanas</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #8B7355; 
+            --secondary-color: #F5F5DC; 
+            --accent-color: #D2B48C; 
+            --light-color: #FFF8E7; 
+            --dark-color: #5D4037; 
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(139, 115, 85, 0.7), rgba(139, 115, 85, 0.7)), url("./img/banner.avif");
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .product-section {
+            background-color: var(--accent-color);
+            padding: 4rem 0;
+        }
+        
+        .product-image {
+            
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .size-btn {
+            margin: 5px;
+            background-color: var(--secondary-color);
+            border: 1px solid var(--accent-color);
+            color: var(--dark-color);
+        }
+        
+        .size-btn:hover, .size-btn.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .delivery-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .delivery-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .delivery-card img {
+            
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .carousel-section {
+            background-color: var(--accent-color);
+            padding: 4rem 0;
+        }
+        
+        .carousel-img {
+            
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .accordion-button {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .contact-collapse {
+            margin-bottom: 10px;
+        }
+        
+        .contact-btn {
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .contact-btn:hover {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .about-section {
+            background-color: var(--accent-color);
+            padding: 4rem 0;
+        }
+        
+        .about-img {
+            
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .form-section {
+            background-color: var(--primary-color);
+            padding: 4rem 0;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-stars me-2"></i>
+                Chamarras Celeste
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#puntos-entrega">Puntos de Entrega</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chamarras-hombre">Chamarras Hombre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chamarras-mujer">Chamarras Mujer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sugerencias">Sugerencias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="hero-section" id="inicio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Chamarras Coreanas Celeste</h1>
+                    <p class="lead">Descubre la última tendencia en moda coreana con nuestras exclusivas chamarras. Diseño, comodidad y estilo en una sola prenda.</p>
+                    <a href="#productos" class="btn btn-light btn-lg mt-3">Ver Colección</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="product-section" id="productos">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    
+                    <img src="./img/chamarra1.avif" alt="Chamarra Coreana Oversized" class="img-fluid product-image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-3">Chamarra Coreana</h2>
+                    <p class="text-muted mb-4">Diseño único inspirado en las últimas tendencias de Seúl. Perfecta para cualquier ocasión.</p>
+                    
+                    <div class="mb-4">
+                        <h4>Descripción</h4>
+                        <p>Chamarra oversized de alta calidad con corte moderno y detalles únicos. Fabricada con materiales premium que garantizan durabilidad y comodidad. Ideal para looks casuales y elegantes.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>Precio: Bs. 250</h4>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5>Selecciona tu talla:</h5>
+                        <div class="d-flex flex-wrap">
+                            <button class="btn size-btn">S</button>
+                            <button class="btn size-btn">M</button>
+                            <button class="btn size-btn">L</button>
+                            <button class="btn size-btn">XL</button>
+                            <button class="btn size-btn">2XL</button>
+                            <button class="btn size-btn">3XL</button>
+                            <button class="btn size-btn">4XL</button>
+                            <button class="btn size-btn">5XL</button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-lg">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5" id="puntos-entrega">
+        <div class="container">
+            <h2 class="text-center mb-5">Puntos de Entrega</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card delivery-card">
+                        
+                        <img src="./img/centro1.jpg" class="card-img-top" alt="Centro de la ciudad">
+                        <div class="card-body">
+                            <h5 class="card-title">Centro de la Ciudad</h5>
+                            <p class="card-text">En el corazon de la ciudad de La Paz. Entregas desde San Francisco hasta la plaza del estudiante.</p>
+                            <button class="btn btn-primary">Coordinar entrega en esta dirección</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card delivery-card">
+                        
+                        <img src="/img/elalto.jpg" class="card-img-top" alt="Zona Norte">
+                        <div class="card-body">
+                            <h5 class="card-title">El Alto</h5>
+                            <p class="card-text">En la ciudad más joven, entregas en las difertentes estaciones de los telefericos: azul,morado y amarillo.</p>
+                            <button class="btn btn-primary">Coordinar entrega en esta dirección</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card delivery-card">
+                        
+                        <img src="./img/sur.jpg" class="card-img-top" alt="Zona Sur">
+                        <div class="card-body">
+                            <h5 class="card-title">Zona Sur</h5>
+                            <p class="card-text">En la calida zona sur, entregas por calacoto y miraflores.</p>
+                            <button class="btn btn-primary">Coordinar entrega en esta dirección</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="carousel-section" id="chamarras-hombre">
+        <div class="container">
+            <h2 class="text-center mb-5">Chamarras de Varón</h2>
+            <div id="carouselHombre" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 text-center">
+                                
+                                <img src="./img/casual.avif" class="carousel-img" alt="Chamarra Hombre 1">
+                                <h5 class="mt-3">Chamarra Casual</h5>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                
+                                <img src="./img/deportiva.avif" class="carousel-img" alt="Chamarra Hombre 2">
+                                <h5 class="mt-3">Chamarra Deportiva</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 text-center">
+                                
+                                <img src="./img/elegante.avif" class="carousel-img" alt="Chamarra Hombre 3">
+                                <h5 class="mt-3">Chamarra Elegante</h5>
+                            </div>
+                            <div class="col-md-4 text-center">
+                            
+                                <img src="./img/cuero.jpg" class="carousel-img" alt="Chamarra Hombre 4">
+                                <h5 class="mt-3">Chamarra de Cuero</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHombre" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHombre" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="carousel-section" id="chamarras-mujer">
+        <div class="container">
+            <h2 class="text-center mb-5">Chamarras de Mujer</h2>
+            <div id="carouselMujer" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 text-center">
+                                <img src="./img/casualm.avif" class="carousel-img" alt="Chamarra Mujer 1">
+                                <h5 class="mt-3">Chamarra Casual</h5>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <!-- Imagen de chamarra - Tamaño recomendado: 500x600px -->
+                                <img src="./img/depotivam.jpg" class="carousel-img" alt="Chamarra Mujer 2">
+                                <h5 class="mt-3">Chamarra Deportiva</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 text-center">
+                            
+                                <img src="./img/elegantem.avif" class="carousel-img" alt="Chamarra Mujer 3">
+                                <h5 class="mt-3">Chamarra Elegante</h5>
+                            </div>
+                            <div class="col-md-4 text-center">
+                            
+                                <img src="./img/cuerom.avif" class="carousel-img" alt="Chamarra Mujer 4">
+                                <h5 class="mt-3">Chamarra de Cuero</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMujer" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next " type="button" data-bs-target="#carouselMujer" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5" id="faq">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white">Preguntas Frecuentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            ¿Cómo sé qué talla debo elegir?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Se le proporcionara las medidas del pecho,cadera,cuello y cintura para que se sienta seguro que es su talla.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            ¿Cuál es el tiempo de entrega?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            El tiempo de entrega varía según tu ubicación. En la ciudad se coordinara la dispnibilidad de tiempo tantp suya como nuestra. Para envíos internacionales, el tiempo varia segun el departamento y la empresa de envio.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            ¿Aceptan devoluciones?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, aceptamos devoluciones dentro de los 15 días posteriores a la recepción del producto. El artículo debe estar en perfectas condiciones, con etiquetas y en su empaque original.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            ¿Los productos son importados directamente de Corea?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, trabajamos directamente con fabricantes coreanos para garantizar la autenticidad y calidad de nuestros productos. Todas nuestras chamarras siguen los estándares de diseño y calidad coreanos.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            ¿Ofrecen descuentos por compras al por mayor?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, ofrecemos descuentos especiales para compras al por mayor (mínimo 12 unidades). Contáctanos directamente para discutir tus necesidades y te proporcionaremos una cotización personalizada.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5" id="contacto">
+        <div class="container">
+            <h2 class="text-center mb-5">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-collapse">
+                        <button class="btn contact-btn" type="button" data-bs-toggle="collapse" data-bs-target="#contact1">
+                            Contactarse con Patricia - Asesora de Ventas
+                        </button>
+                        <div class="collapse" id="contact1">
+                            <div class="card card-body">
+                                <p><strong>Patricia</strong></p>
+                                <p><i class="bi bi-telephone"></i> Teléfono: +591 69827601</p>
+                                <p><i class="bi bi-whatsapp"></i> WhatsApp: +591 69827601</p>
+                                <p><i class="bi bi-envelope"></i> Email: patriciamanterola52@gmail.com</p>
+                                <p>Horario de atención: Lunes a Viernes 9:00 - 18:00</p>
+                                <p>Especialista en chamarras de mujer,hombre y tallas especiales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-collapse">
+                        <button class="btn contact-btn" type="button" data-bs-toggle="collapse" data-bs-target="#contact2">
+                            Contactarse con Carlos - Coordinador de Entregas
+                        </button>
+                        <div class="collapse" id="contact2">
+                            <div class="card card-body">
+                                <p><strong>Carlos Rodríguez</strong></p>
+                                <p><i class="bi bi-telephone"></i> Teléfono: +591 76738546</p>
+                                <p><i class="bi bi-whatsapp"></i> WhatsApp: +591 76738546</p>
+                                <p><i class="bi bi-envelope"></i> Email: carlos.entregas@gmail.com</p>
+                                <p>Horario de atención: Lunes a Sábado 8:00 - 20:00</p>
+                                <p>Encargado de coordinar entregas y resolver problemas logísticos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-collapse">
+                        <button class="btn contact-btn" type="button" data-bs-toggle="collapse" data-bs-target="#contact3">
+                            Contactarse con Celeste - Servicio al Cliente
+                        </button>
+                        <div class="collapse" id="contact3">
+                            <div class="card card-body">
+                                <p><strong>Celeste</strong></p>
+                                <p><i class="bi bi-telephone"></i> Teléfono: +591 67148853</p>
+                                <p><i class="bi bi-whatsapp"></i> WhatsApp: +591 67148853</p>
+                                <p><i class="bi bi-envelope"></i> Email: laura.servicio@gmail.com</p>
+                                <p>Horario de atención: Lunes a Domingo 8:00 - 22:00</p>
+                                <p>Especialista en resolver dudas, quejas y procesar devoluciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="about-section" id="nosotros">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    
+                    <img src="./img/16dejulio.jpeg" alt="Sobre StyleCorea" class="img-fluid about-img">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Sobre Chamarras Celeste</h2>
+                    <p>Chamarras Celeste nació en 2025 con la misión de expandirnos y tener presencia en redes sociales, habiendo trabajado desde 1990, con una experiencia de 35 años, un negocio familiar.</p>
+                    <p>Chamarras importadas desde el exterior de diferentes modelos y para diferentes ocaciones.</p>
+                    <p>Nuestro equipo son personas que buscan que lleves algo que de verdad estes buscando, dandote varias opciones, para tu propio estilo</p>
+                    <p>Creemos que la moda debe ser accesible para todos, por eso ofrecemos una amplia gama de tallas desde S hasta 5XL, asegurando que cada persona encuentre su estilo perfecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="form-section" id="sugerencias">
+        <div class="container">
+            <h2 class="text-center mb-5">Envíanos tus Sugerencias</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="suggestionsForm" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre completo *</label>
+                            <input type="text" class="form-control" id="name" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios">
+                            <div class="invalid-feedback">
+                                Por favor ingresa un nombre válido (solo letras y espacios).
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor ingresa un correo electrónico válido">
+                            <div class="invalid-feedback">
+                                Por favor ingresa un correo electrónico válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" pattern="[0-9+\-\s()]{7,}" title="Por favor ingresa un número de teléfono válido">
+                            <div class="invalid-feedback">
+                                Por favor ingresa un número de teléfono válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="suggestion" class="form-label">Tu sugerencia *</label>
+                            <textarea class="form-control" id="suggestion" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor ingresa tu sugerencia.
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletter">
+                            <label class="form-check-label" for="newsletter">Deseo recibir información sobre nuevos productos y promociones</label>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Sugerencia</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Chamarras Celeste</h5>
+                    <p>Chamarras coreanas de alta calidad para todos los estilos.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-white">Inicio</a></li>
+                        <li><a href="#productos" class="text-white">Productos</a></li>
+                        <li><a href="#faq" class="text-white">Preguntas Frecuentes</a></li>
+                        <li><a href="#contacto" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2023 StyleCorea. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
